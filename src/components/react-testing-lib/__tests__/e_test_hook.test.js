@@ -9,8 +9,6 @@ import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() })
 
-
-
 it('Text in state is changed when button clicked', () => {
     const wrapper = mount(<TestHook />)
     //console.log(wrapper.debug());
@@ -22,4 +20,20 @@ it('Text in state is changed when button clicked', () => {
     const test_button = wrapper.find(`[data-test="state_button"]`);
     test_button.simulate('click');
     expect(test_state.text()).toBe("Initial State Changed");
+});
+
+describe('some desc statement', () => {
+    
+    const appWrapper = mount(<App />);
+    const test_name = appWrapper.find('.names');
+
+    it('should be moe', () => {
+        expect(test_name.text()).toBe("Moe");
+    });
+
+    it('shold be steve', () => {
+        const name_button = appWrapper.find(`[data-test="test_name_button"]`);
+        name_button.simulate('click');
+        expect(test_name.text()).toBe("Steve");
+    })
 });

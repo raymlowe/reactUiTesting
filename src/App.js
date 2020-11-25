@@ -38,7 +38,7 @@ const App = () => {
         <TestHookContext />
      </Context.Provider>
      <HooksForm1 />
-     <TestAxios url='https://jsonplaceholder.typicode.com/posts/1' />
+    {/*  <TestAxios url='https://jsonplaceholder.typicode.com/posts/1' /> */}
     </div>
   );
 }

@@ -18,10 +18,10 @@ const TestHook = (props) => {
       State Change Button
     </button>
     <p data-test='test_state'>{state}</p>
-    <button onClick={changeNameToSteve}>
+    <button data-test='test_name_button' onClick={changeNameToSteve}>
        Change Name
     </button>
-    <p>{props.name}</p>
+    <p className='names'>{props.name}</p>
   </div>
   )
 }

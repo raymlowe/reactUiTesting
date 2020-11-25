@@ -1,6 +1,9 @@
 import React from 'react';
 
 
+console.log(navigator);
+console.log(navigator.userAgent);
+console.log(navigator.userAgent.indexOf("Chrome") !== -1);
 
 const Basic = () => {
   return (
